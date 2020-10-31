@@ -11,8 +11,9 @@ sudo apt-get install software-properties-common
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A74F73EFFE70B91C
 
 sudo add-apt-repository ppa:elementary-os/stable
-
 sudo add-apt-repository ppa:philip.scott/elementary-tweaks
+sudo add-apt-repository ppa:nm-l2tp/network-manager-l2tp
+
 sudo apt update
 
 sudo apt-get install sddm
@@ -36,6 +37,7 @@ sudo apt autoremove
 #sudo dpkg-reconfigure sddm
 
 sudo sed -i '$ a nameserver 8.8.8.8' /etc/resolvconf/resolv.conf.d/head
+sudo systemctl restart resolvconf
 
 sudo apt install network-manager-l2tp network-manager-l2tp-gnome
 sudo apt install firefox firefox-locale-es
