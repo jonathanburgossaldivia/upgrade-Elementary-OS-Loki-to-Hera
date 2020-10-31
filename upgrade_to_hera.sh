@@ -51,8 +51,8 @@ git clone https://github.com/cbrnix/Newaita.git ~/.icons/
 cd ~/.icons/ && rm -rf .directory .git wall_* README* cover* && cd
 sed -i "s/Inherits=.*/Inherits=elementary/g" ~/.icons/Newaita/index.theme
 sed -i "s/Inherits=.*/Inherits=elementary/g" ~/.icons/Newaita-dark/index.theme
-find ~/.icons/Newaita-dark/ -type f \( -iname "network-wireless*.svg" -o -iname "audio*.svg" -o -iname "system*.svg" -o -iname "blue*.svg" \) -exec rm -rf {} \;
-find ~/.icons/Newaita/ -type f \( -iname "network-wireless*.svg" -o -iname "audio*.svg" -o -iname "system*.svg" -o -iname "blue*.svg" \) -exec rm -rf {} \;
+find ~/.icons/Newaita-dark/ -type f \( -iname "network-wireless*.svg" -o -iname "audio*.svg" -o -iname "system*.svg" -o -iname "blue*.svg" -o -iname "notification*.svg"\) -delete
+find ~/.icons/Newaita/ -type f \( -iname "network-wireless*.svg" -o -iname "audio*.svg" -o -iname "system*.svg" -o -iname "blue*.svg" -o -iname "notification*.svg"\) -delete
 gtk-update-icon-cache ~/.icons/Newaita/
 gtk-update-icon-cache ~/.icons/Newaita-dark/
 
