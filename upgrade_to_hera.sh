@@ -35,9 +35,21 @@ sudo apt autoremove
 
 #sudo dpkg-reconfigure sddm
 
-sudo apt-get install network-manager-l2tp network-manager-l2tp-gnome
+sudo sed -i '$ a nameserver 8.8.8.8' /etc/resolvconf/resolv.conf.d/head
+
+sudo apt install network-manager-l2tp network-manager-l2tp-gnome
 sudo apt install firefox firefox-locale-es
 sudo apt install libreoffice libreoffice-l10n-es
+sudo apt install git
+mkdir ~/.themes
+git clone https://github.com/surajmandalcell/elementary-x.git ~/.themes/elementary-x
 
+mkdir ~/.icons
+git clone https://github.com/cbrnix/Newaita.git ~/.icons/
+cd ~/.icons/ && rm -rf .directory .git wall_* README* cover*
+sed -i "s/Inherits=.*/Inherits=elementary/g" ~/.icons/Newaita/index.theme
+sed -i "s/Inherits=.*/Inherits=elementary/g" ~/.icons/Newaita-dark/index.theme
+gtk-update-icon-cache ~/.icons/Newaita/
+gtk-update-icon-cache ~/.icons/Newaita-dark/
 
 
