@@ -1,14 +1,14 @@
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list
-sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/appcenter.list
+#sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/appcenter.list
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/elementary.list
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/patches.list
+
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A74F73EFFE70B91C
 
 sudo apt update
 
 sudo apt remove perl-modules-5.22
 sudo apt-get install software-properties-common
-
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A74F73EFFE70B91C
 
 sudo add-apt-repository ppa:elementary-os/stable
 sudo add-apt-repository ppa:philip.scott/elementary-tweaks
