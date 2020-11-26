@@ -1,5 +1,5 @@
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list
-#sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/appcenter.list
+sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/appcenter.list
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/elementary.list
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/patches.list
 
