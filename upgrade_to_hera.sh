@@ -4,6 +4,7 @@ sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/elementary.list
 sudo sed -i 's/xenial/bionic/g' /etc/apt/sources.list.d/patches.list
 
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A74F73EFFE70B91C
+sudo wget -O /etc/apt/trusted.gpg.d/appcenter.asc http://packages.elementary.io/key.asc
 
 sudo apt update
 
@@ -55,5 +56,8 @@ find ~/.icons/Newaita-dark/ -type f \( -iname "network-wireless*.svg" -o -iname 
 find ~/.icons/Newaita/ -type f \( -iname "network-wireless*.svg" -o -iname "audio*.svg" -o -iname "system*.svg" -o -iname "blue*.svg" -o -iname "notification*.svg"\) -delete
 gtk-update-icon-cache ~/.icons/Newaita/
 gtk-update-icon-cache ~/.icons/Newaita-dark/
+
+sudo apt install com.github.philip-scott.notes-up
+
 
 
